@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import { FaGoogle } from "react-icons/fa";
 import axios from "axios";
+import "./Login.css";
 
 
 const Login = () => {
@@ -57,25 +58,32 @@ const Login = () => {
   };
 
   const loginBoxStyle = {
-    height: "430px",
+    height: "440px",
     width: "400px",
     display: "flex",
-    backgroundColor: "#e7e7e7",
+    backgroundColor: "#ffffff",
     flexDirection: "column",
     justifyContent: "space-between",
     padding: "20px",
-    border: "1px solid #fcaaa8", // Border color
+    border: "1px solid #ffffff", // Border color
     borderRadius: "10px",
     boxShadow: "10px 10px 10px #444444",
     zIndex: "999",
-    flexwrap: "wrap",
+    flexWrap: "wrap",
   };
 
+  
+
+
+
+
   const titleStyle = {
-    fontSize: "50px",
-    fontFamily: "Oswald, sans-serif", // Font family
+    fontSize: "40px",
+    // fontFamily: "Oswald, sans-serif", // Font family
     color: "#000000", // Text color
     textAlign: "center",
+      fontFamily: "Josefin Sans, sans-serif",
+      marginTop:"10px"
   };
 
   const buttonContainerStyle = {
@@ -84,8 +92,8 @@ const Login = () => {
   };
 
   const buttonStyle = {
-    backgroundColor: "#000000", // Button background color
-    color: "#fff", // Button text color
+    backgroundColor: "#ffffff", // Button background color
+    color: "#000000", // Button text color
     fontFamily: "Montserrat",
     border: "none",
     padding: "10px 20px",
@@ -94,8 +102,8 @@ const Login = () => {
   };
 
   const hoverButtonStyle = {
-    backgroundColor: "#fff", // Button background color on hover
-    color: "#000000", // Button text color on hover
+    backgroundColor: "#272727", // Button background color on hover
+    color: "#ffffff", // Button text color on hover
     fontFamily: "Montserrat",
     border: "1px solid black",
     padding: "10px 20px",
@@ -109,22 +117,24 @@ const Login = () => {
     left: "10px", // Position the above image to the left
     top: "80px", // Add some space from the top
     width: "400px",
-    marginBottom: "20px", // Add margin bottom to create space between image and login box
+    marginBottom: "20px", 
+    filter: "blur(1px)"
   };
 
   const imageBelowStyle = {
     position: "absolute",
-    right: "10px", // Position the below image to the right
-    bottom: "50px", // Add some space from the bottom
+    right: "10px", 
+    bottom: "50px", 
     width: "400px",
-    marginBottom: "20px", // Add margin bottom to create space between image and login box
+    marginBottom: "20px",
+    filter: "blur(1px)"
   };
 
   return (
     <div style={containerStyle}>
       <img src={"/assets/images/1.png"} alt="Above Image" style={imageStyle} />
-      <div style={loginBoxStyle}>
-        <h1 style={titleStyle}> LOGIN</h1>
+      <div style={loginBoxStyle} className="responsive-login-box">
+        <h1 style={titleStyle}>LOGIN</h1>
         <form onSubmit={formHandle}>
           {/* <input 
           required

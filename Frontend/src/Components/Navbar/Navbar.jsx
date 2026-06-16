@@ -157,8 +157,8 @@ const Header = () => {
                 SWAP SKILL
               </Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body style={{ backgroundColor: "#242424" }}>
-              <Nav className="justify-content-end flex-grow-1 pe-3 " style={{ backgroundColor: "#242424" }}>
+            <Offcanvas.Body style={{ backgroundColor: "#000000" }}>
+              <Nav className="justify-content-end flex-grow-1 pe-3 " style={{ backgroundColor: "#000000" }}>
                 <Nav.Link as={Link} to="/" style={{ fontFamily: "Montserrat, sans-serif", color: "#ffffff" }}>
                   Home
                 </Nav.Link>
