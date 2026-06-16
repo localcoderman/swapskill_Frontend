@@ -65,7 +65,7 @@ const Login = () => {
     flexDirection: "column",
     justifyContent: "space-between",
     padding: "20px",
-    border: "1px solid #ffffff", // Border color
+    border: "1px solid #000000", // Border color
     borderRadius: "10px",
     boxShadow: "10px 10px 10px #444444",
     zIndex: "999",
@@ -95,7 +95,7 @@ const Login = () => {
     backgroundColor: "#ffffff", // Button background color
     color: "#000000", // Button text color
     fontFamily: "Montserrat",
-    border: "none",
+    border: "1px solid black",
     padding: "10px 20px",
     borderRadius: "5px",
     cursor: "pointer",
