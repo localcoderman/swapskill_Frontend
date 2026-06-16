@@ -14,7 +14,8 @@ const ProfileCard = ({ profileImageUrl, bio, name, skills, rating, username }) =
       <p style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", width: "150px" }}>{bio}</p>
       <div className="prof-buttons">
         {/* <button className="primary">Connect</button> */}
-        <Link to={`/profile/${username}`}>
+        <Link to={username ? `/profile/${username}` : "#"} 
+  style={{ pointerEvents: username ? 'auto' : 'none', color: username ? 'inherit' : 'gray' }}>
           <button className="primary ghost">View Profile</button>
         </Link>
       </div>
