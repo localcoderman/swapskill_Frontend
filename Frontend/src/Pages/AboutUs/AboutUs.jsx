@@ -13,6 +13,7 @@ const contentContainerStyle = {
   maxWidth: "50vw",
   margin: "60px",
   justifyContent: "center",
+  padding: '0 15px',
 };
 
 const titleStyle = {
@@ -26,12 +27,17 @@ const titleStyle = {
 
 const descriptionStyle = {
   fontFamily: "Montserrat, sans-serif",
+  fontSize: "clamp(0.9rem, 1.5vw + 0.5rem, 1rem)",
   color: "#f2efdb",
-  fontSize: "1rem",
   lineHeight: "1.6",
   textAlign: "left",
-  maxHeight: "100vh",
+  // maxHeight: "100vh",
+  wordBreak: "break-word",
 };
+
+
+
+
 
 const imageContainerStyle = {
   display: "flex",
@@ -42,9 +48,9 @@ const imageContainerStyle = {
 const AboutUs = () => {
   return (
     <div className="content1-container">
-      <div style={contentContainerStyle}>
+      <div style={contentContainerStyle} className="mobile-content-container">
         <h2 style={titleStyle}>About Us</h2>
-        <p style={descriptionStyle}>
+        <p style={descriptionStyle} >
           <i>
             As students, we have looked for upskilling everywhere. Mostly, we end up paying big amounts to gain
             certifications and learn relevant skills. We thought of Swapskill to resolve that. Learning new skills and
@@ -65,11 +71,11 @@ const AboutUs = () => {
         </p>
       </div>
       <img
-        src={"/assets/images/about us.png"}
+        src={"/assets/images/about us.jpg"}
         style={{
           maxWidth: "23vw",
           maxHeight: "100vh",
-          filter: "brightness(0.8) contrast(1.2)", // Isse image thodi dark ho jayegi
+          filter: "brightness(0.8) contrast(1)", // Isse image thodi dark ho jayegi
         }}
       />
     </div>

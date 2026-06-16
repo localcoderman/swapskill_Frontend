@@ -4,6 +4,7 @@
   align-items: start;
   background-color: #0f0f0f;
   justify-content: center;
+  padding: 0 15px;
 }
 
 @media (max-width: 780px) {
@@ -15,3 +16,21 @@
     text-align: center !important;
   }
 }
+
+@media (max-width: 780px) {
+  .content1-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+.mobile-content-container {
+    max-width: 95% !important; /* Mobile par width barha di */
+    margin: 20px 0 !important; /* Margin kam kar diya */
+  }
+}
+
+/* @media (max-width: 600px) {
+  .contentContainerStyle {
+    margin: 20px !important;
+  }
+} */
