@@ -154,7 +154,7 @@ const Header = () => {
                 id={`offcanvasNavbarLabel-expand-md`}
                 style={{ fontFamily: "Josefin Sans, sans-serif", color: "#000000" }}
               >
-                Swap Skill
+                SWAP SKILL
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body style={{ backgroundColor: "#242424" }}>
