@@ -35,7 +35,9 @@ const Discover = () => {
     const getUser = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get(`/user/registered/getDetails`);
+        const { data } = await axios.get(`/user/registered/getDetails`, {
+          withCredentials: true, 
+        });
         // console.log(data.data);
         setUser(data.data);
         localStorage.setItem("userInfo", JSON.stringify(data.data));
@@ -52,7 +54,9 @@ const Discover = () => {
     };
     const getDiscoverUsers = async () => {
       try {
-        const { data } = await axios.get("/user/discover");
+        const { data } = await axios.get("/user/discover", {
+          withCredentials: true, 
+        });
         console.log(data);
         setDiscoverUsers(data.data.forYou);
         setWebDevUsers(data.data.webDev);
@@ -82,7 +86,7 @@ const Discover = () => {
           <div className="nav-bar">
             <Nav defaultActiveKey="/home" className="flex-column">
               <Nav.Link href="#for-you" className="navlink" id="foryou">
-                Trending 
+                Trending
               </Nav.Link>
               <Nav.Link href="#popular" className="navlink" id="popular1">
                 Popular
@@ -138,29 +142,26 @@ const Discover = () => {
                         skills={user?.skillsProficientAt}
                         username={user?.username}
                       />
-                      
                     ))
                   ) : (
                     // <h1 style={{ color: "#a6a6a6" }}>No users to show</h1>
-                     <>
-                     <ProfileCard
-                    profileImageUrl="/assets/images/profile3.jpg"
-                    name="Abdullah Chadhar"
-                    rating="⭐⭐⭐⭐"
-                    bio="Photography and art enthusiast. National Wildlife Photography Awardee."
-                    skills={["Art", "Photography"]}
-                  />
-                    <ProfileCard
-                    profileImageUrl="/assets/images/profile.jpg"
-                    name="Abdullah Jutt"
-                    rating="⭐⭐⭐⭐"
-                    bio="Professor - Maths 2 @ IIIT Raipur. Specialising in Algebra"
-                    skills={["Mathematics", "Algebra", "Arithmetic"]}
-                  />
-                     </>
-                  )
-                  }
-                
+                    <>
+                      <ProfileCard
+                        profileImageUrl="/assets/images/profile3.jpg"
+                        name="Abdullah Chadhar"
+                        rating="⭐⭐⭐⭐"
+                        bio="Photography and art enthusiast. National Wildlife Photography Awardee."
+                        skills={["Art", "Photography"]}
+                      />
+                      <ProfileCard
+                        profileImageUrl="/assets/images/profile.jpg"
+                        name="Abdullah Jutt"
+                        rating="⭐⭐⭐⭐"
+                        bio="Professor - Maths 2 @ IIIT Raipur. Specialising in Algebra"
+                        skills={["Mathematics", "Algebra", "Arithmetic"]}
+                      />
+                    </>
+                  )}
                 </div>
                 <h1
                   id="popular"
@@ -208,11 +209,10 @@ const Discover = () => {
                       />
                     ))
                   ) : (
-                    <h1 style={{ color: "#a6a6a6" ,fontSize: "1.25rem" }}>No users to show</h1>
+                    <h1 style={{ color: "#a6a6a6", fontSize: "1.25rem" }}>No users to show</h1>
                   )}
-                  
                 </div>
-                
+
                 <h2 id="others">Others</h2>
                 <div className="profile-cards">
                   {/* Profile cards go here */}
@@ -231,25 +231,23 @@ const Discover = () => {
                   ) : (
                     // <h1 style={{ color: "#a6a6a6" }}>No users to show</h1>
                     <>
-                    <ProfileCard
-                    profileImageUrl="/assets/images/profile.jpg"
-                    name="Abdullah Jutt"
-                    rating="⭐⭐⭐⭐"
-                    bio="Professor - Maths 2 @ IIIT Raipur. Specialising in Algebra"
-                    skills={["Mathematics", "Algebra", "Arithmetic"]}
-                  />
-                  <ProfileCard
-                    profileImageUrl="/assets/images/profile3.jpg"
-                    name="Abdullah Chadhar"
-                    rating="⭐⭐⭐⭐"
-                    bio="Photography and art enthusiast. National Wildlife Photography Awardee."
-                    skills={["Art", "Photography"]}
-                  />
+                      <ProfileCard
+                        profileImageUrl="/assets/images/profile.jpg"
+                        name="Abdullah Jutt"
+                        rating="⭐⭐⭐⭐"
+                        bio="Professor - Maths 2 @ IIIT Raipur. Specialising in Algebra"
+                        skills={["Mathematics", "Algebra", "Arithmetic"]}
+                      />
+                      <ProfileCard
+                        profileImageUrl="/assets/images/profile3.jpg"
+                        name="Abdullah Chadhar"
+                        rating="⭐⭐⭐⭐"
+                        bio="Photography and art enthusiast. National Wildlife Photography Awardee."
+                        skills={["Art", "Photography"]}
+                      />
                     </>
                   )}
-                  
                 </div>
-                
               </>
             )}
           </div>
