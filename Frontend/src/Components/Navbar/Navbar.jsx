@@ -152,13 +152,13 @@ const Header = () => {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title
                 id={`offcanvasNavbarLabel-expand-md`}
-                style={{ fontFamily: "Josefin Sans, sans-serif", color: "#028477" }}
+                style={{ fontFamily: "Josefin Sans, sans-serif", color: "#000000" }}
               >
-                SKILL SWAP
+                Swap Skill
               </Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+            <Offcanvas.Body style={{ backgroundColor: "#242424" }}>
+              <Nav className="justify-content-end flex-grow-1 pe-3 " style={{ backgroundColor: "#242424" }}>
                 <Nav.Link as={Link} to="/" style={{ fontFamily: "Montserrat, sans-serif", color: "#ffffff" }}>
                   Home
                 </Nav.Link>
@@ -198,21 +198,21 @@ const Header = () => {
                         </Nav.Link>
                         <Nav.Link
                           href="#web-development"
-                          style={{ fontFamily: "Montserrat, sans-serif", color: "#013e38", marginLeft: "1.5rem" }}
+                          style={{ fontFamily: "Montserrat, sans-serif", color: "#ffffff", marginLeft: "1.5rem" }}
                           className="d-md-none"
                         >
                           Web Development
                         </Nav.Link>
                         <Nav.Link
                           href="#machine-learning"
-                          style={{ fontFamily: "Montserrat, sans-serif", color: "#013e38", marginLeft: "1.5rem" }}
+                          style={{ fontFamily: "Montserrat, sans-serif", color: "#ffffff", marginLeft: "1.5rem" }}
                           className="d-md-none"
                         >
                           Machine Learning
                         </Nav.Link>
                         <Nav.Link
                           href="#others"
-                          style={{ fontFamily: "Montserrat, sans-serif", color: "#013e38", marginLeft: "1.5rem" }}
+                          style={{ fontFamily: "Montserrat, sans-serif", color: "#ffffff", marginLeft: "1.5rem" }}
                           className="d-md-none"
                         >
                           Others
