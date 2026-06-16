@@ -368,7 +368,7 @@ const Chats = () => {
                             selectedRequest && selectedRequest.id === request.id ? "#3BB4A1" : "lightgrey",
                           borderRadius: "5px",
                         }}
-                      >       
+                      >
                         {request.name}
                       </ListGroup.Item>
                     ))}
@@ -430,18 +430,22 @@ const Chats = () => {
             {/* Profile Info (Placeholder) */}
             {selectedChat && (
               <>
-                   <Link to={`/profile/${selectedChat?.username}`} style={{ textDecoration: "none"}}> 
-                <div>
-                  <img
-                    src={selectedChat?.picture ? selectedChat.picture : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"}
-                    alt="Profile"
-                    style={{ width: "40px", height: "40px", borderRadius: "50%", marginRight: "10px" }}
-                  />
-                  <span style={{ fontFamily: "Montserrat, sans-serif", color: "#2d2d2d" }}>
-                    {selectedChat?.username}
-                  </span>
-                </div>
-                  </Link>
+                <Link to={`/profile/${selectedChat?.username}`} style={{ textDecoration: "none" }}>
+                  <div>
+                    <img
+                      src={
+                        selectedChat?.picture
+                          ? selectedChat.picture
+                          : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                      }
+                      alt="Profile"
+                      style={{ width: "40px", height: "40px", borderRadius: "50%", marginRight: "10px" }}
+                    />
+                    <span style={{ fontFamily: "Montserrat, sans-serif", color: "#2d2d2d" }}>
+                      {selectedChat?.username}
+                    </span>
+                  </div>
+                </Link>
                 <Button variant="info" onClick={handleScheduleClick}>
                   Request Video Call
                 </Button>
@@ -501,7 +505,10 @@ const Chats = () => {
                     </div>
                   ) : (
                     <div className="row w-100 h-100 d-flex justify-content-center align-items-center">
-                      <h3 className="row w-100 d-flex justify-content-center align-items-center" style={{ color: "#6b6b6b" }}>
+                      <h3
+                        className="row w-100 d-flex justify-content-center align-items-center"
+                        style={{ color: "#6b6b6b" }}
+                      >
                         Select a chat to start messaging
                       </h3>
                     </div>
@@ -535,7 +542,7 @@ const Chats = () => {
                     borderRadius: "5px",
                     marginRight: "10px",
                     border: "1px solid #2d2d2d",
-                    color:"black"
+                    color: "black",
                   }}
                 />
                 <Button variant="success" style={{ padding: "10px 20px", borderRadius: "5px" }} onClick={sendMessage}>
@@ -551,26 +558,44 @@ const Chats = () => {
       {scheduleModalShow && (
         <div
           style={{
+            // position: "fixed",
+            // top: "0",
+            // left: "0",
+            // width: "100%",
+            // height: "100%",
+            // backgroundColor: "rgba(0, 0, 0, 0.7)",
+            // zIndex: "500",
             position: "fixed",
             top: "0",
             left: "0",
             width: "100%",
             height: "100%",
             backgroundColor: "rgba(0, 0, 0, 0.7)",
-            zIndex: "500",
+            zIndex: "2000", // Z-index barha diya
+            display: "flex", // Centering ke liye flex
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px",
           }}
         >
           <div
             style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
+              // position: "absolute",
+              // top: "50%",
+              // left: "50%",
+              // transform: "translate(-50%, -50%)",
+              // backgroundColor: "#2d2d2d",
+              // color: "#3BB4A1",
+              // padding: "50px",
+              // borderRadius: "10px",
+              // zIndex: "1001",
               backgroundColor: "#2d2d2d",
               color: "#3BB4A1",
-              padding: "50px",
+              padding: "30px",
               borderRadius: "10px",
-              zIndex: "1001",
+              width: "100%",
+              maxWidth: "400px", // Yeh line ensure karegi ke content pichkay nahi
+              zIndex: "2001",
             }}
           >
             <h3>Request a Meeting</h3>
